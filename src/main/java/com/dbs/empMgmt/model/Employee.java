@@ -3,13 +3,17 @@ package com.dbs.empMgmt.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+
 public class Employee implements Serializable, Comparable<Employee>{
+	
 	
 	private long id;
 	private String name;
 	private LocalDate dateOfBirth;
-	private String departmentName;
-	
+	private String departmentName="CSE";
+	public Employee(){
+		
+	}
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", departmentName="
@@ -67,9 +71,9 @@ public class Employee implements Serializable, Comparable<Employee>{
 		return id;
 	}
 
-//	public void setId(long id) {
-//		this.id = id;
-//	}
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;
